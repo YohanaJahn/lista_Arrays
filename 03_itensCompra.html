@@ -8,11 +8,28 @@
     //A lista completa de compras é: fruta1, fruta2, fruta3, bebida1, bebida2, bebida3.
 
     //ENTRADA
-
-
+    const fruta1 = prompt("Iremos fazer uma lista de Frutas. Insira uma Fruta :").trim();
+    const fruta2 = prompt("Insira outra Fruta :").trim();
+    const fruta3 = prompt("Insira mais uma Fruta, agora a ultima :").trim();
+    const bebida1 = prompt("Agora iremos fazer uma lista de Bebidas. Insira uma Bebida :").trim();
+    const bebida2 = prompt("Insira outra Bebida :").trim();
+    const bebida3 = prompt("Insira mais uma Bebida, agora a ultima :").trim();
     //PROCESSAMENTO
+    let arrayFrutas = []
+    let arrayBebida = []
+    let arrayCompras = []
 
+    if(isNaN(fruta1),isNaN(fruta2),isNaN(fruta3) ,isNaN(bebida1) ,isNaN(bebida2) ,isNaN(bebida3)){
+        arrayFrutas = [fruta1, fruta2, fruta3]
+        arrayBebida = [bebida1, bebida2, bebida3]
+        arrayCompras = [fruta1, fruta2, fruta3, bebida1, bebida2, bebida3]
+    }
+    else{
+        alert("Respostas Invalidas")
+        stop()
+    }
 
+    alert(`Sua lista de Frutas será ${arrayFrutas.join(" - ")}. \n Sua lista de Bebidas será ${arrayBebida.join(" - ")}. \n Sua lista compras completa será ${arrayCompras.join(" - ")}.`)
     //SAÍDA
 
 </script>

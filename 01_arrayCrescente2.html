@@ -5,10 +5,19 @@
 
     //ENTRADA
 
-
+    const num1 = Number(prompt("Informe um número :").trim().replace(",", "."));
+    const num2 = Number(prompt("Informe outro número :").trim().replace(",", "."));
     //PROCESSAMENTO
 
-
+    let arrayVazio = [];
+    if (num1 > num2) {
+        arrayVazio = [num2, num1]
+    }
+    else {
+        arrayVazio = [num1, num2]
+    }
     //SAÍDA
+
+    alert (`Os elementos de array são : ${arrayVazio.join(" - ")}.`);
     
 </script>

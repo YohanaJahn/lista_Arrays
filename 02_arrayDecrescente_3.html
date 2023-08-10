@@ -5,10 +5,36 @@
 
     //ENTRADA
 
-
+    const num1 = Number(prompt("Informe um número :").trim().replace(",", "."));
+    const num2 = Number(prompt("Informe outro número :").trim().replace(",", "."));
+    const num3 = Number(prompt("Informe outro número :").trim().replace(",", "."));
     //PROCESSAMENTO
 
-
+    let arrayVazio = [];
+    if (num1 > num2 && num1 > num3 && num2 > num3) {
+        arrayVazio = [num1, num2, num3 ]
+    }
+    else if (num1 > num2 && num1 > num3 && num3 > num2){
+        arrayVazio = [num1, num3, num2 ]
+    }
+    else if(num2 > num1 && num2 > num3 && num1 > num3){
+        arrayVazio = [num2, num1, num3]
+    }
+    else if(num2 > num1 && num2 > num3 && num3 > num1){
+    arrayVazio = [num2, num3, num1]
+    }
+    else if(num3 > num1 && num3 > num2 && num2 > num1){
+    arrayVazio = [num3, num2, num1]
+    }
+    else if(num3 > num1 && num3 > num2 && num1 > num2){
+    arrayVazio = [num3, num1, num2]
+    }
+    else{
+        alert("Respostas Invalidas.")
+    }
+    
     //SAÍDA
 
+    alert (`Os elementos de array são : ${arrayVazio.join(" - ")}.`);
+    
 </script>
