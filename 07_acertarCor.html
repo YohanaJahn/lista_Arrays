@@ -9,15 +9,24 @@
     //Caso não acerte, o programa deverá retornar:
     //NÃO FOI DESSA VEZ... TENTE NOVAMENTE!
 
-    //ENTRADA
-
-
+    //ENTRADA   
+    const cor = prompt("azul, amarelo, verde, branco, preto, marrom, cinza\nInforme UMA das cores acima").toLowerCase().trim()
     //PROCESSAMENTO
+    const nomeCor = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+    let mensagem = ""
+    let sorteada = Math.floor(Math.random() * 7)
 
+    if (nomeCor.indexOf(cor) === sorteada) {
+        mensagem = `PARABÉNS! Você está com sorte na cor ${cor}`
+    } else if (nomeCor.indexOf(cor) === -1) {
+        mensagem = `Cor inválida!`
+    } else if (nomeCor.indexOf(cor) !== sorteada) {
+        mensagem = `NÃO FOI DESSA VEZ... TENTE NOVAMENTE!`
+    }
 
     //SAÍDA
-
-
+    
+    alert(mensagem)
 
     /*
     Para gerar números aleatórios, há a função random, da biblioteca Math. Nesse caso, o comando deverá ser o Math.random().

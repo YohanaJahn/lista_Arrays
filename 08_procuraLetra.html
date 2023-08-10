@@ -6,11 +6,22 @@
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
     //ENTRADA
-
+    const palavra = prompt("Informe a palavra").toLowerCase()
+    const letra = prompt("Informe a letra para ser procurada").toLowerCase()
 
     //PROCESSAMENTO
+    const array = Array.from(palavra)
+    let mensagem = ""
 
+    if(array.indexOf(letra)!== -1){
+        mensagem = `A letra está na posição ${array.indexOf(letra)}.`
+    }
+    else{
+        mensagem = `A letra não existe na palavra`
+    }
 
     //SAÍDA
+
+    alert(mensagem)
 
 </script>

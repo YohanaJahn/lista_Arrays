@@ -9,12 +9,32 @@
 
     //Apresente a lista final de cada tipo de veículo.
 
-    //ENTRADA
+    alert ("A lista oferece: \n Carros SUV = Tiggo, Sportage, Tucson, EcoSport \n Carros Sedan = Civic, Corolla, Arizzo, Fusion \n Carros Hatch = 308, Focus, i30")
 
+    const novo1 = prompt("Qual carro você deseja adicionar?")
+    const lista1 = parseInt(prompt(`Em qual lista deseja adicionar o ${novo1}? 1-SUV, 2-Sedan ou 3-Hatch.`).trim().toLowerCase())
+    const novo2 = prompt("Diga outro carro que você deseja adicionar?")
+    const lista2 = parseInt(prompt(`Em qual lista deseja adicionar o ${novo2}? 1-SUV, 2-Sedan ou 3-Hatch.`).trim().toLowerCase())
+    const novo3 = prompt("Ultimo carro que você deseja adicionar?")
+    const lista3 = parseInt(prompt(`Em qual lista deseja adicionar o ${novo3}? 1-SUV, 2-Sedan ou 3-Hatch.`).trim().toLowerCase())
 
     //PROCESSAMENTO
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    
+    (lista1 == 1)? carrosSUV.push(novo1):
+    (lista1 == 2)?carrosSedan.push(novo1):
+    carrosHatch.push(novo1);
 
+    (lista2 == 1)? carrosSUV.push(novo2):
+    (lista2 == 2)?carrosSedan.push(novo2):
+    carrosHatch.push(novo2);
 
+    (lista3 == 1)? carrosSUV.push(novo3):
+    (lista3 == 2)?carrosSedan.push(novo3):
+    carrosHatch.push(novo3);
     //SAÍDA
+    alert(`Carros SUV: ${carrosSUV}\nCarros Sedan: ${carrosSedan}\nCarros Hatch: ${carrosHatch}`);
 
 </script>
